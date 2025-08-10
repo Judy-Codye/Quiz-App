@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LocalStorage Quiz App</title>
+</head>
+<body>
+    
+<div class="container" id="registerDiv">
+  <h2>Sign Up</h2>
+  <input type="text" id="regName" placeholder="Name"><br><br>
+  <input type="email" id="regEmail" placeholder="Email"><br><br>
+  <input type="password" id="regPass" placeholder="Password"><br><br>
+  <button onclick="registerUser()">Register</button>
+  <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+</div>
+
+<div class="container hidden" id="loginDiv">
+  <h2>Login</h2>
+  <input type="email" id="loginEmail" placeholder="Email"><br><br>
+  <input type="password" id="loginPass" placeholder="Password"><br><br>
+  <button onclick="loginUser()">Login</button>
+</div>
+
+<div class="container hidden" id="quizDiv">
+  <div class="timer" id="timer">Time Left: 30:00</div>
+  <h3 id="questionText"></h3>
+  <div id="optionsDiv"></div><br>
+  <button onclick="nextQuestion()">Next</button>
+</div>
+
+<div class="container hidden" id="resultDiv">
+  <h2>Quiz Results</h2>
+  <p id="scoreText"></p>
+  <h4>Past Attempts:</h4>
+  <ul id="historyList"></ul>
+</div>
+    
+</body>
+<script src="script.js"></script>
+</html>
